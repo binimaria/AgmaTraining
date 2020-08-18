@@ -9,7 +9,7 @@ public class callWrapper {
 		  wm.enterbyid("txtUsername", "Admin");
 		  wm.enterbyid("txtPassword", "admin123");
 		  wm.clickbyxpath("//*[@id=\"btnLogin\"]");
-		  wm.takesnap("src/test/resources/screenshot/screenshotfile2.png");
+		  wm.takesnap("src/test/resources/screenshot/screenshotfile3.png");
 		  wm.closeapp();
 			}
 

@@ -31,6 +31,11 @@ Select status= new Select(driver.findElement(By.xpath("//*[@id=\"searchSystemUse
 status.selectByIndex(1);
 //status.selectByValue("Enabled');
 //driver.close();
+//to remove the interruption
+/*Thread.sleep(3000);
+Actions action= new Actions(driver);
+action.sendKeys(Keys.ESCAPE).build().perform(); */
+
 
 
 	}
