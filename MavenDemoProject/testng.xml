@@ -2,9 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" name="Suite" parallel="classes">
   <test thread-count="2" name="Test" parallel="classes">
+  <groups>
+    <run>
+      <include name="smoke"/>
+      <exclude name="Sanity"/>
+    </run>
+  </groups>
+  
     <classes>
-      <class name="com.testNG.parallelExecution"/>
-      <class name="com.testNG.parallelExecution1"/>
+      
+      <class name="dependsUponGroup"/>
       
     </classes>
   </test> <!-- Test -->

@@ -2,6 +2,7 @@ package com.testcases;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -56,6 +57,24 @@ driver.findElement(By.id(val)).sendKeys(name);
 	    Select month=new Select(driver.findElement(By.id("month")));
 	    month.selectByVisibleText(text);
 	}
+	public void enterbyname(String val3, String name3) {
+		driver.findElement(By.name(val3)).sendKeys(name3);
+	}
+
+	public void windowsHandling()
+	{
+Set<String>winhandles=driver.getWindowHandles();//all the windows
 		
+		System.out.println("the number of window are:"+winhandles.size());
+		
+		
+		for(String winhandle:winhandles) {
+			driver.switchTo().window(winhandle);
+			// write code below whatever you want to do in the next window
+		}
+		String title=driver.getTitle();
+		System.out.println("the page title is"+ title);
+
+	}
 	}
 

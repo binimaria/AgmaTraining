@@ -2,29 +2,70 @@
 <testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="99" started-at="2020-08-18T12:11:17 PDT" finished-at="2020-08-18T12:11:17 PDT">
+  <suite name="Default suite" duration-ms="27988" started-at="2020-08-20T22:11:15 PDT" finished-at="2020-08-20T22:11:43 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="99" started-at="2020-08-18T12:11:17 PDT" finished-at="2020-08-18T12:11:17 PDT">
-      <class name="com.testNG.dependsOnMethods">
-        <test-method status="PASS" signature="login()[pri:0, instance:com.testNG.dependsOnMethods@9660f4e]" name="login" duration-ms="6" started-at="2020-08-18T12:11:17 PDT" finished-at="2020-08-18T12:11:17 PDT">
+    <test name="Default test" duration-ms="27988" started-at="2020-08-20T22:11:15 PDT" finished-at="2020-08-20T22:11:43 PDT">
+      <class name="homewoks.DataProviderrangeHRM">
+        <test-method status="PASS" signature="loginToOrangeHRM(java.lang.String, java.lang.String)[pri:0, instance:homewoks.DataProviderrangeHRM@51cdd8a]" name="loginToOrangeHRM" duration-ms="8976" started-at="2020-08-20T22:11:15 PDT" data-provider="OranageHRMlogin" finished-at="2020-08-20T22:11:24 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[passwd1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="FAIL" signature="search()[pri:0, instance:com.testNG.dependsOnMethods@9660f4e]" name="search" duration-ms="11" started-at="2020-08-18T12:11:17 PDT" depends-on-methods="com.testNG.dependsOnMethods.login" finished-at="2020-08-18T12:11:17 PDT">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- loginToOrangeHRM -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:homewoks.DataProviderrangeHRM@51cdd8a]" name="tearDown" is-config="true" duration-ms="818" started-at="2020-08-20T22:11:24 PDT" finished-at="2020-08-20T22:11:24 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="loginToOrangeHRM(java.lang.String, java.lang.String)[pri:0, instance:homewoks.DataProviderrangeHRM@51cdd8a]" name="loginToOrangeHRM" duration-ms="9035" started-at="2020-08-20T22:11:24 PDT" data-provider="OranageHRMlogin" finished-at="2020-08-20T22:11:33 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[passwd3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToOrangeHRM -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:homewoks.DataProviderrangeHRM@51cdd8a]" name="tearDown" is-config="true" duration-ms="680" started-at="2020-08-20T22:11:33 PDT" finished-at="2020-08-20T22:11:34 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="FAIL" signature="loginToOrangeHRM(java.lang.String, java.lang.String)[pri:0, instance:homewoks.DataProviderrangeHRM@51cdd8a]" name="loginToOrangeHRM" duration-ms="7734" started-at="2020-08-20T22:11:34 PDT" data-provider="OranageHRMlogin" finished-at="2020-08-20T22:11:42 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[expected [abc] but found [xyz]]]>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [abc] but found [xyz]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at com.testNG.dependsOnMethods.search(dependsOnMethods.java:17)
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+at homewoks.DataProviderrangeHRM.loginToOrangeHRM(DataProviderrangeHRM.java:25)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -55,15 +96,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:com.testNG.dependsOnMethods@9660f4e]" name="logout" duration-ms="2" started-at="2020-08-18T12:11:17 PDT" depends-on-methods="com.testNG.dependsOnMethods.search" finished-at="2020-08-18T12:11:17 PDT">
+        </test-method> <!-- loginToOrangeHRM -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:homewoks.DataProviderrangeHRM@51cdd8a]" name="tearDown" is-config="true" duration-ms="677" started-at="2020-08-20T22:11:42 PDT" finished-at="2020-08-20T22:11:42 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-      </class> <!-- com.testNG.dependsOnMethods -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- homewoks.DataProviderrangeHRM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
